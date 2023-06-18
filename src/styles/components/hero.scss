@@ -1,0 +1,147 @@
+.hero-section {
+  width: 100vw;
+  height: 250vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  .hero-marker {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hero-heading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+    position: sticky;
+
+    h1 {
+      top: auto;
+      left: auto;
+      z-index: 1;
+      opacity: 1;
+      right: auto;
+      bottom: auto;
+      margin-top: 0;
+      color: #fdfdfd;
+      margin-bottom: 0;
+      font-size: 420px;
+      font-weight: 400;
+      line-height: 100%;
+      position: absolute;
+      letter-spacing: -3px;
+      font-family: $font-alt-sfpro;
+
+      @include ipad {
+        font-size: 250px;
+      }
+
+      @include tablet {
+        letter-spacing: -1px;
+        font-size: 120px;
+      }
+    }
+
+    h3 {
+      top: auto;
+      left: auto;
+      z-index: 1;
+      opacity: 0;
+      right: auto;
+      width: 750px;
+      bottom: auto;
+      margin-top: 0;
+      max-width: 90vw;
+      color: #fdfdfd;
+      margin-bottom: 0;
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 130%;
+      position: absolute;
+      text-align: center;
+      letter-spacing: 0.4px;
+      font-family: $font-sans-b;
+
+      @include tablet {
+        letter-spacing: 0.4px;
+        font-size: 32px;
+      }
+      @include tablet {
+        font-size: 24px;
+        letter-spacing: 1.4;
+        letter-spacing: 0.4px;
+      }
+    }
+    @include tablet {
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.fixed-nav {
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  z-index: z("nav");
+  align-items: center;
+  padding-bottom: 30px;
+  pointer-events: none;
+  justify-content: center;
+  div {
+    display: flex;
+  }
+  &__content {
+    width: 400px;
+    height: 70px;
+    padding: 8px;
+    color: $grey;
+    max-width: 90vw;
+    border-radius: 20px;
+    pointer-events: all;
+    background: #1e1e1e;
+
+    .nav-item {
+      @extend %row-middle;
+      flex: 1;
+      gap: 6px;
+      height: 100%;
+      font-size: 15px;
+      overflow: hidden;
+      font-family: $font-sans-b;
+
+      &.logo {
+        gap: 0px;
+        svg {
+          border-radius: 100%;
+        }
+        .logo-text {
+          color: $white;
+          line-height: 1;
+          font-size: 16px;
+          letter-spacing: 1.1px;
+        }
+      }
+
+      &.chrome-link {
+        gap: 0px;
+        color: $black;
+        font-size: 14px;
+        background: $white;
+        border-radius: 15px;
+        background: #a6ff00;
+        background: #ffcb9a;
+      }
+
+      &:nth-child(2) {
+        padding-right: 16px;
+      }
+    }
+  }
+}

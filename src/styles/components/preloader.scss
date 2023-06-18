@@ -1,0 +1,41 @@
+.preloader {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: z("preloader");
+
+  color: $white;
+  background: $dark-bg;
+  background: #202020;
+
+  &__text {
+    width: 100%;
+    color: #fff;
+    font-size: 32px;
+    max-width: 672px;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.5px;
+    span {
+      font-size: 0px;
+      overflow: hidden;
+      display: inline-block;
+      span {
+        font-size: 30px;
+        @include phone {
+          font-size: 25px;
+        }
+      }
+    }
+    @include phone {
+      padding-bottom: 15px;
+    }
+  }
+}
