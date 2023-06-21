@@ -3,7 +3,6 @@
   display: flex;
   min-height: 100vh;
   background: $dark-bg;
-  max-width: $content-w;
   flex-direction: column;
 
   &.no-scroll {
