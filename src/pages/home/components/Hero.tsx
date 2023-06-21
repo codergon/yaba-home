@@ -68,7 +68,7 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
             className="nav-item chrome-link"
-            href="https://chrome.google.com/webstore/detail/lagenfgfnjhnkimjbocgnfmhdeckhfgk"
+            href="https://chrome.google.com/webstore/detail/fhfacijlgfbbpeigpdnjkgopjdgcmilj"
           >
             Download
           </a>
