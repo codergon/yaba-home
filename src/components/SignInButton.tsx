@@ -1,7 +1,11 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import Icons from "./Icons";
 
-function SignInButton() {
+interface SignInButtonProps {
+  setStatus: (status: string) => void;
+}
+
+function SignInButton({ setStatus }: SignInButtonProps) {
   const googleLogin = useGoogleLogin({
     flow: "implicit",
     // Get othercontacts and profile scope
@@ -42,11 +46,11 @@ function SignInButton() {
               "*"
             );
           })
-          .catch(error => console.log(error));
+          .catch(e => setStatus("error"));
       }
     },
 
-    onError: errorResponse => console.log(errorResponse),
+    onError: e => setStatus("error"),
   });
 
   return (
